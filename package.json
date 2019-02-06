@@ -1,0 +1,57 @@
+{
+  "name": "html-pug-converter",
+  "version": "1.0.0",
+  "description": "Converts HTML to Pug",
+  "main": "src/index.js",
+  "bin": {
+    "html-pug-converter": "src/cli.js"
+  },
+  "dependencies": {
+    "get-stdin": "^5.0.1",
+    "html-minifier": "^3.5.2",
+    "parse5": "^2.1.5",
+    "yargs": "^8.0.2"
+  },
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "eslint": "^4.1.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.6.1",
+    "eslint-plugin-node": "^5.1.0",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "husky": "^0.14.2",
+    "lint-staged": "^4.0.0",
+    "prettier-standard": "^6.0.0"
+  },
+  "scripts": {
+    "test": "ava",
+    "standard": "prettier-standard 'src/**/*.js'",
+    "lint": "eslint src",
+    "precommit": "lint-staged",
+    "prepush": "npm run lint"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ToshioAkaneya/html-pug-converter.git"
+  },
+  "keywords": [
+    "html",
+    "pug",
+    "jade",
+    "convert",
+    "templates"
+  ],
+  "author": "Toshio Akaneya <1040.mail@gmail.com> (https://toshioakaneya.github.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ToshioAkaneya/html-pug-converter/issues"
+  },
+  "homepage": "https://github.com/ToshioAkaneya/html-pug-converter#readme"
+}
